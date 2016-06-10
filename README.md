@@ -1,8 +1,8 @@
-# docker-compose-rails
+# rails-starter-with-docker-compose
 
 ## What's this?
 
-docker-compose-rails is a starter for rails with docker-compose.
+rails-starter-with-docker-compose is a starter for rails with docker-compose.
 
 1. Fork this repository
 1. Rename your repository
