@@ -11,13 +11,3 @@ services:
       - "3000:3000"
     depends_on:
       - db
-    volumes_from:
-      - bundle
-    environment:
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=
-      - DB_HOST=db
-  bundle:
-    image: myapp_web
-    volumes:
-      - /bundle
