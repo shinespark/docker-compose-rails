@@ -6,8 +6,18 @@ services:
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - ./myapp:/myapp
+      - .:/myapp
     ports:
       - "3000:3000"
     depends_on:
       - db
+    volumes_from:
+      - bundle
+    environment:
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=
+      - DB_HOST=db
+  bundle:
+    image: myapp_web
+    volumes:
+      - /bundle
